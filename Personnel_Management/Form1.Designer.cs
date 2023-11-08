@@ -46,7 +46,6 @@
             this.Id_txt = new System.Windows.Forms.MaskedTextBox();
             this.Id = new System.Windows.Forms.Label();
             this.Per_prcss = new System.Windows.Forms.GroupBox();
-            this.Graph_Button = new System.Windows.Forms.Button();
             this.St_Button = new System.Windows.Forms.Button();
             this.List_Button = new System.Windows.Forms.Button();
             this.Clear_Button = new System.Windows.Forms.Button();
@@ -55,11 +54,13 @@
             this.Save_Button = new System.Windows.Forms.Button();
             this.List = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.perAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perMaasDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.perDurumDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.perMeslekDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.peridDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perSurnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perCityDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perWageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.perMritalSttsDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.perJobDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tblPersonelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.personel_veri_tabaniDataSet = new Personel_Kayit.Personel_veri_tabaniDataSet();
             this.tbl_PersonelTableAdapter = new Personel_Kayit.Personel_veri_tabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
@@ -246,7 +247,6 @@
             // Per_prcss
             // 
             this.Per_prcss.BackColor = System.Drawing.Color.Brown;
-            this.Per_prcss.Controls.Add(this.Graph_Button);
             this.Per_prcss.Controls.Add(this.St_Button);
             this.Per_prcss.Controls.Add(this.List_Button);
             this.Per_prcss.Controls.Add(this.Clear_Button);
@@ -261,22 +261,11 @@
             this.Per_prcss.TabStop = false;
             this.Per_prcss.Text = "Per Process";
             // 
-            // Graph_Button
-            // 
-            this.Graph_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Graph_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Graph_Button.Location = new System.Drawing.Point(159, 295);
-            this.Graph_Button.Name = "Graph_Button";
-            this.Graph_Button.Size = new System.Drawing.Size(175, 38);
-            this.Graph_Button.TabIndex = 6;
-            this.Graph_Button.Text = "Graphics";
-            this.Graph_Button.UseVisualStyleBackColor = true;
-            // 
             // St_Button
             // 
             this.St_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.St_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.St_Button.Location = new System.Drawing.Point(159, 251);
+            this.St_Button.Location = new System.Drawing.Point(157, 269);
             this.St_Button.Name = "St_Button";
             this.St_Button.Size = new System.Drawing.Size(175, 38);
             this.St_Button.TabIndex = 5;
@@ -288,7 +277,7 @@
             // 
             this.List_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.List_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.List_Button.Location = new System.Drawing.Point(159, 207);
+            this.List_Button.Location = new System.Drawing.Point(157, 225);
             this.List_Button.Name = "List_Button";
             this.List_Button.Size = new System.Drawing.Size(175, 38);
             this.List_Button.TabIndex = 4;
@@ -300,7 +289,7 @@
             // 
             this.Clear_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Clear_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Clear_Button.Location = new System.Drawing.Point(159, 163);
+            this.Clear_Button.Location = new System.Drawing.Point(157, 181);
             this.Clear_Button.Name = "Clear_Button";
             this.Clear_Button.Size = new System.Drawing.Size(175, 38);
             this.Clear_Button.TabIndex = 3;
@@ -312,7 +301,7 @@
             // 
             this.Upgrade_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Upgrade_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Upgrade_Button.Location = new System.Drawing.Point(159, 119);
+            this.Upgrade_Button.Location = new System.Drawing.Point(157, 137);
             this.Upgrade_Button.Name = "Upgrade_Button";
             this.Upgrade_Button.Size = new System.Drawing.Size(175, 38);
             this.Upgrade_Button.TabIndex = 2;
@@ -324,7 +313,7 @@
             // 
             this.Delete_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Delete_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Delete_Button.Location = new System.Drawing.Point(159, 75);
+            this.Delete_Button.Location = new System.Drawing.Point(157, 93);
             this.Delete_Button.Name = "Delete_Button";
             this.Delete_Button.Size = new System.Drawing.Size(175, 38);
             this.Delete_Button.TabIndex = 1;
@@ -336,7 +325,7 @@
             // 
             this.Save_Button.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Save_Button.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Save_Button.Location = new System.Drawing.Point(159, 31);
+            this.Save_Button.Location = new System.Drawing.Point(157, 49);
             this.Save_Button.Name = "Save_Button";
             this.Save_Button.Size = new System.Drawing.Size(175, 38);
             this.Save_Button.TabIndex = 0;
@@ -360,11 +349,13 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.perAdDataGridViewTextBoxColumn,
-            this.perSoyadDataGridViewTextBoxColumn,
-            this.perMaasDataGridViewTextBoxColumn,
-            this.perDurumDataGridViewCheckBoxColumn,
-            this.perMeslekDataGridViewTextBoxColumn});
+            this.peridDataGridViewTextBoxColumn,
+            this.perNameDataGridViewTextBoxColumn,
+            this.perSurnameDataGridViewTextBoxColumn,
+            this.perCityDataGridViewTextBoxColumn,
+            this.perWageDataGridViewTextBoxColumn,
+            this.perMritalSttsDataGridViewCheckBoxColumn,
+            this.perJobDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tblPersonelBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 28);
@@ -373,48 +364,63 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(946, 202);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick_1);
             // 
-            // perAdDataGridViewTextBoxColumn
+            // peridDataGridViewTextBoxColumn
             // 
-            this.perAdDataGridViewTextBoxColumn.DataPropertyName = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.HeaderText = "PerAd";
-            this.perAdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.perAdDataGridViewTextBoxColumn.Name = "perAdDataGridViewTextBoxColumn";
-            this.perAdDataGridViewTextBoxColumn.Width = 125;
+            this.peridDataGridViewTextBoxColumn.DataPropertyName = "Perid";
+            this.peridDataGridViewTextBoxColumn.HeaderText = "Perid";
+            this.peridDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.peridDataGridViewTextBoxColumn.Name = "peridDataGridViewTextBoxColumn";
+            this.peridDataGridViewTextBoxColumn.ReadOnly = true;
+            this.peridDataGridViewTextBoxColumn.Width = 125;
             // 
-            // perSoyadDataGridViewTextBoxColumn
+            // perNameDataGridViewTextBoxColumn
             // 
-            this.perSoyadDataGridViewTextBoxColumn.DataPropertyName = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.HeaderText = "PerSoyad";
-            this.perSoyadDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.perSoyadDataGridViewTextBoxColumn.Name = "perSoyadDataGridViewTextBoxColumn";
-            this.perSoyadDataGridViewTextBoxColumn.Width = 125;
+            this.perNameDataGridViewTextBoxColumn.DataPropertyName = "PerName";
+            this.perNameDataGridViewTextBoxColumn.HeaderText = "PerName";
+            this.perNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perNameDataGridViewTextBoxColumn.Name = "perNameDataGridViewTextBoxColumn";
+            this.perNameDataGridViewTextBoxColumn.Width = 125;
             // 
-            // perMaasDataGridViewTextBoxColumn
+            // perSurnameDataGridViewTextBoxColumn
             // 
-            this.perMaasDataGridViewTextBoxColumn.DataPropertyName = "PerMaas";
-            this.perMaasDataGridViewTextBoxColumn.HeaderText = "PerMaas";
-            this.perMaasDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.perMaasDataGridViewTextBoxColumn.Name = "perMaasDataGridViewTextBoxColumn";
-            this.perMaasDataGridViewTextBoxColumn.Width = 125;
+            this.perSurnameDataGridViewTextBoxColumn.DataPropertyName = "PerSurname";
+            this.perSurnameDataGridViewTextBoxColumn.HeaderText = "PerSurname";
+            this.perSurnameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perSurnameDataGridViewTextBoxColumn.Name = "perSurnameDataGridViewTextBoxColumn";
+            this.perSurnameDataGridViewTextBoxColumn.Width = 125;
             // 
-            // perDurumDataGridViewCheckBoxColumn
+            // perCityDataGridViewTextBoxColumn
             // 
-            this.perDurumDataGridViewCheckBoxColumn.DataPropertyName = "PerDurum";
-            this.perDurumDataGridViewCheckBoxColumn.HeaderText = "PerDurum";
-            this.perDurumDataGridViewCheckBoxColumn.MinimumWidth = 6;
-            this.perDurumDataGridViewCheckBoxColumn.Name = "perDurumDataGridViewCheckBoxColumn";
-            this.perDurumDataGridViewCheckBoxColumn.Width = 125;
+            this.perCityDataGridViewTextBoxColumn.DataPropertyName = "PerCity";
+            this.perCityDataGridViewTextBoxColumn.HeaderText = "PerCity";
+            this.perCityDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perCityDataGridViewTextBoxColumn.Name = "perCityDataGridViewTextBoxColumn";
+            this.perCityDataGridViewTextBoxColumn.Width = 125;
             // 
-            // perMeslekDataGridViewTextBoxColumn
+            // perWageDataGridViewTextBoxColumn
             // 
-            this.perMeslekDataGridViewTextBoxColumn.DataPropertyName = "PerMeslek";
-            this.perMeslekDataGridViewTextBoxColumn.HeaderText = "PerMeslek";
-            this.perMeslekDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.perMeslekDataGridViewTextBoxColumn.Name = "perMeslekDataGridViewTextBoxColumn";
-            this.perMeslekDataGridViewTextBoxColumn.Width = 125;
+            this.perWageDataGridViewTextBoxColumn.DataPropertyName = "PerWage";
+            this.perWageDataGridViewTextBoxColumn.HeaderText = "PerWage";
+            this.perWageDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perWageDataGridViewTextBoxColumn.Name = "perWageDataGridViewTextBoxColumn";
+            this.perWageDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // perMritalSttsDataGridViewCheckBoxColumn
+            // 
+            this.perMritalSttsDataGridViewCheckBoxColumn.DataPropertyName = "PerMrital_Stts";
+            this.perMritalSttsDataGridViewCheckBoxColumn.HeaderText = "PerMrital_Stts";
+            this.perMritalSttsDataGridViewCheckBoxColumn.MinimumWidth = 6;
+            this.perMritalSttsDataGridViewCheckBoxColumn.Name = "perMritalSttsDataGridViewCheckBoxColumn";
+            this.perMritalSttsDataGridViewCheckBoxColumn.Width = 125;
+            // 
+            // perJobDataGridViewTextBoxColumn
+            // 
+            this.perJobDataGridViewTextBoxColumn.DataPropertyName = "PerJob";
+            this.perJobDataGridViewTextBoxColumn.HeaderText = "PerJob";
+            this.perJobDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.perJobDataGridViewTextBoxColumn.Name = "perJobDataGridViewTextBoxColumn";
+            this.perJobDataGridViewTextBoxColumn.Width = 125;
             // 
             // tblPersonelBindingSource
             // 
@@ -430,7 +436,7 @@
             // 
             this.tbl_PersonelTableAdapter.ClearBeforeFill = true;
             // 
-            // Form
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -441,7 +447,7 @@
             this.Controls.Add(this.Per_info);
             this.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "Form";
+            this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Per_info.ResumeLayout(false);
@@ -483,16 +489,18 @@
         private System.Windows.Forms.BindingSource tblPersonelBindingSource;
         private Personel_veri_tabaniDataSetTableAdapters.Tbl_PersonelTableAdapter tbl_PersonelTableAdapter;
         private System.Windows.Forms.ComboBox City_Combo;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn personelidDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perAdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perSoyadDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn persehirDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perMaasDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn perDurumDataGridViewCheckBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn perMeslekDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button Graph_Button;
         private System.Windows.Forms.Button St_Button;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn perMarriedStatusDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn peridDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perSurnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perCityDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perWageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn perMritalSttsDataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn perJobDataGridViewTextBoxColumn;
     }
 }
 

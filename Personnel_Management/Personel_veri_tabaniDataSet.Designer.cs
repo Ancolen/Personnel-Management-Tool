@@ -281,17 +281,17 @@ namespace Personel_Kayit {
             
             private global::System.Data.DataColumn columnPerid;
             
-            private global::System.Data.DataColumn columnPerAd;
+            private global::System.Data.DataColumn columnPerName;
             
-            private global::System.Data.DataColumn columnPerSoyad;
+            private global::System.Data.DataColumn columnPerSurname;
             
-            private global::System.Data.DataColumn columnPerSehir;
+            private global::System.Data.DataColumn columnPerCity;
             
-            private global::System.Data.DataColumn columnPerMaas;
+            private global::System.Data.DataColumn columnPerWage;
             
-            private global::System.Data.DataColumn columnPerDurum;
+            private global::System.Data.DataColumn columnPerMrital_Stts;
             
-            private global::System.Data.DataColumn columnPerMeslek;
+            private global::System.Data.DataColumn columnPerJob;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
@@ -336,49 +336,49 @@ namespace Personel_Kayit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerAdColumn {
+            public global::System.Data.DataColumn PerNameColumn {
                 get {
-                    return this.columnPerAd;
+                    return this.columnPerName;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerSoyadColumn {
+            public global::System.Data.DataColumn PerSurnameColumn {
                 get {
-                    return this.columnPerSoyad;
+                    return this.columnPerSurname;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerSehirColumn {
+            public global::System.Data.DataColumn PerCityColumn {
                 get {
-                    return this.columnPerSehir;
+                    return this.columnPerCity;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerMaasColumn {
+            public global::System.Data.DataColumn PerWageColumn {
                 get {
-                    return this.columnPerMaas;
+                    return this.columnPerWage;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerDurumColumn {
+            public global::System.Data.DataColumn PerMrital_SttsColumn {
                 get {
-                    return this.columnPerDurum;
+                    return this.columnPerMrital_Stts;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn PerMeslekColumn {
+            public global::System.Data.DataColumn PerJobColumn {
                 get {
-                    return this.columnPerMeslek;
+                    return this.columnPerJob;
                 }
             }
             
@@ -419,16 +419,16 @@ namespace Personel_Kayit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public Tbl_PersonelRow AddTbl_PersonelRow(string PerAd, string PerSoyad, string PerSehir, short PerMaas, bool PerDurum, string PerMeslek) {
+            public Tbl_PersonelRow AddTbl_PersonelRow(string PerName, string PerSurname, string PerCity, short PerWage, bool PerMrital_Stts, string PerJob) {
                 Tbl_PersonelRow rowTbl_PersonelRow = ((Tbl_PersonelRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        PerAd,
-                        PerSoyad,
-                        PerSehir,
-                        PerMaas,
-                        PerDurum,
-                        PerMeslek};
+                        PerName,
+                        PerSurname,
+                        PerCity,
+                        PerWage,
+                        PerMrital_Stts,
+                        PerJob};
                 rowTbl_PersonelRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowTbl_PersonelRow);
                 return rowTbl_PersonelRow;
@@ -452,12 +452,12 @@ namespace Personel_Kayit {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
                 this.columnPerid = base.Columns["Perid"];
-                this.columnPerAd = base.Columns["PerAd"];
-                this.columnPerSoyad = base.Columns["PerSoyad"];
-                this.columnPerSehir = base.Columns["PerSehir"];
-                this.columnPerMaas = base.Columns["PerMaas"];
-                this.columnPerDurum = base.Columns["PerDurum"];
-                this.columnPerMeslek = base.Columns["PerMeslek"];
+                this.columnPerName = base.Columns["PerName"];
+                this.columnPerSurname = base.Columns["PerSurname"];
+                this.columnPerCity = base.Columns["PerCity"];
+                this.columnPerWage = base.Columns["PerWage"];
+                this.columnPerMrital_Stts = base.Columns["PerMrital_Stts"];
+                this.columnPerJob = base.Columns["PerJob"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -465,27 +465,27 @@ namespace Personel_Kayit {
             private void InitClass() {
                 this.columnPerid = new global::System.Data.DataColumn("Perid", typeof(short), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPerid);
-                this.columnPerAd = new global::System.Data.DataColumn("PerAd", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerAd);
-                this.columnPerSoyad = new global::System.Data.DataColumn("PerSoyad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerSoyad);
-                this.columnPerSehir = new global::System.Data.DataColumn("PerSehir", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerSehir);
-                this.columnPerMaas = new global::System.Data.DataColumn("PerMaas", typeof(short), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerMaas);
-                this.columnPerDurum = new global::System.Data.DataColumn("PerDurum", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerDurum);
-                this.columnPerMeslek = new global::System.Data.DataColumn("PerMeslek", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPerMeslek);
+                this.columnPerName = new global::System.Data.DataColumn("PerName", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerName);
+                this.columnPerSurname = new global::System.Data.DataColumn("PerSurname", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerSurname);
+                this.columnPerCity = new global::System.Data.DataColumn("PerCity", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerCity);
+                this.columnPerWage = new global::System.Data.DataColumn("PerWage", typeof(short), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerWage);
+                this.columnPerMrital_Stts = new global::System.Data.DataColumn("PerMrital_Stts", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerMrital_Stts);
+                this.columnPerJob = new global::System.Data.DataColumn("PerJob", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPerJob);
                 this.columnPerid.AutoIncrement = true;
                 this.columnPerid.AutoIncrementSeed = -1;
                 this.columnPerid.AutoIncrementStep = -1;
                 this.columnPerid.AllowDBNull = false;
                 this.columnPerid.ReadOnly = true;
-                this.columnPerAd.MaxLength = 10;
-                this.columnPerSoyad.MaxLength = 10;
-                this.columnPerSehir.MaxLength = 10;
-                this.columnPerMeslek.MaxLength = 15;
+                this.columnPerName.MaxLength = 10;
+                this.columnPerSurname.MaxLength = 10;
+                this.columnPerCity.MaxLength = 10;
+                this.columnPerJob.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -639,170 +639,170 @@ namespace Personel_Kayit {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PerAd {
+            public string PerName {
                 get {
                     try {
-                        return ((string)(this[this.tableTbl_Personel.PerAdColumn]));
+                        return ((string)(this[this.tableTbl_Personel.PerNameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PerAd\' in table \'Tbl_Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PerName\' in table \'Tbl_Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Personel.PerAdColumn] = value;
+                    this[this.tableTbl_Personel.PerNameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PerSoyad {
+            public string PerSurname {
                 get {
                     try {
-                        return ((string)(this[this.tableTbl_Personel.PerSoyadColumn]));
+                        return ((string)(this[this.tableTbl_Personel.PerSurnameColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PerSoyad\' in table \'Tbl_Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PerSurname\' in table \'Tbl_Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Personel.PerSoyadColumn] = value;
+                    this[this.tableTbl_Personel.PerSurnameColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PerSehir {
+            public string PerCity {
                 get {
                     try {
-                        return ((string)(this[this.tableTbl_Personel.PerSehirColumn]));
+                        return ((string)(this[this.tableTbl_Personel.PerCityColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PerSehir\' in table \'Tbl_Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PerCity\' in table \'Tbl_Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Personel.PerSehirColumn] = value;
+                    this[this.tableTbl_Personel.PerCityColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public short PerMaas {
+            public short PerWage {
                 get {
                     try {
-                        return ((short)(this[this.tableTbl_Personel.PerMaasColumn]));
+                        return ((short)(this[this.tableTbl_Personel.PerWageColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PerMaas\' in table \'Tbl_Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PerWage\' in table \'Tbl_Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Personel.PerMaasColumn] = value;
+                    this[this.tableTbl_Personel.PerWageColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool PerDurum {
+            public bool PerMrital_Stts {
                 get {
                     try {
-                        return ((bool)(this[this.tableTbl_Personel.PerDurumColumn]));
+                        return ((bool)(this[this.tableTbl_Personel.PerMrital_SttsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PerDurum\' in table \'Tbl_Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PerMrital_Stts\' in table \'Tbl_Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Personel.PerDurumColumn] = value;
+                    this[this.tableTbl_Personel.PerMrital_SttsColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string PerMeslek {
+            public string PerJob {
                 get {
                     try {
-                        return ((string)(this[this.tableTbl_Personel.PerMeslekColumn]));
+                        return ((string)(this[this.tableTbl_Personel.PerJobColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'PerMeslek\' in table \'Tbl_Personel\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'PerJob\' in table \'Tbl_Personel\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableTbl_Personel.PerMeslekColumn] = value;
+                    this[this.tableTbl_Personel.PerJobColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPerAdNull() {
-                return this.IsNull(this.tableTbl_Personel.PerAdColumn);
+            public bool IsPerNameNull() {
+                return this.IsNull(this.tableTbl_Personel.PerNameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPerAdNull() {
-                this[this.tableTbl_Personel.PerAdColumn] = global::System.Convert.DBNull;
+            public void SetPerNameNull() {
+                this[this.tableTbl_Personel.PerNameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPerSoyadNull() {
-                return this.IsNull(this.tableTbl_Personel.PerSoyadColumn);
+            public bool IsPerSurnameNull() {
+                return this.IsNull(this.tableTbl_Personel.PerSurnameColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPerSoyadNull() {
-                this[this.tableTbl_Personel.PerSoyadColumn] = global::System.Convert.DBNull;
+            public void SetPerSurnameNull() {
+                this[this.tableTbl_Personel.PerSurnameColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPerSehirNull() {
-                return this.IsNull(this.tableTbl_Personel.PerSehirColumn);
+            public bool IsPerCityNull() {
+                return this.IsNull(this.tableTbl_Personel.PerCityColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPerSehirNull() {
-                this[this.tableTbl_Personel.PerSehirColumn] = global::System.Convert.DBNull;
+            public void SetPerCityNull() {
+                this[this.tableTbl_Personel.PerCityColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPerMaasNull() {
-                return this.IsNull(this.tableTbl_Personel.PerMaasColumn);
+            public bool IsPerWageNull() {
+                return this.IsNull(this.tableTbl_Personel.PerWageColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPerMaasNull() {
-                this[this.tableTbl_Personel.PerMaasColumn] = global::System.Convert.DBNull;
+            public void SetPerWageNull() {
+                this[this.tableTbl_Personel.PerWageColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPerDurumNull() {
-                return this.IsNull(this.tableTbl_Personel.PerDurumColumn);
+            public bool IsPerMrital_SttsNull() {
+                return this.IsNull(this.tableTbl_Personel.PerMrital_SttsColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPerDurumNull() {
-                this[this.tableTbl_Personel.PerDurumColumn] = global::System.Convert.DBNull;
+            public void SetPerMrital_SttsNull() {
+                this[this.tableTbl_Personel.PerMrital_SttsColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public bool IsPerMeslekNull() {
-                return this.IsNull(this.tableTbl_Personel.PerMeslekColumn);
+            public bool IsPerJobNull() {
+                return this.IsNull(this.tableTbl_Personel.PerJobColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void SetPerMeslekNull() {
-                this[this.tableTbl_Personel.PerMeslekColumn] = global::System.Convert.DBNull;
+            public void SetPerJobNull() {
+                this[this.tableTbl_Personel.PerJobColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -966,12 +966,12 @@ namespace Personel_Kayit.Personel_veri_tabaniDataSetTableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Tbl_Personel";
             tableMapping.ColumnMappings.Add("Perid", "Perid");
-            tableMapping.ColumnMappings.Add("PerAd", "PerAd");
-            tableMapping.ColumnMappings.Add("PerSoyad", "PerSoyad");
-            tableMapping.ColumnMappings.Add("PerSehir", "PerSehir");
-            tableMapping.ColumnMappings.Add("PerMaas", "PerMaas");
-            tableMapping.ColumnMappings.Add("PerDurum", "PerDurum");
-            tableMapping.ColumnMappings.Add("PerMeslek", "PerMeslek");
+            tableMapping.ColumnMappings.Add("PerAd", "PerName");
+            tableMapping.ColumnMappings.Add("PerSoyad", "PerSurname");
+            tableMapping.ColumnMappings.Add("PerSehir", "PerCity");
+            tableMapping.ColumnMappings.Add("PerMaas", "PerWage");
+            tableMapping.ColumnMappings.Add("PerDurum", "PerMrital_Stts");
+            tableMapping.ColumnMappings.Add("PerMeslek", "PerJob");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
